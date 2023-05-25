@@ -4,5 +4,5 @@ make sure you have your .env file with all the credentials required before runni
 
 ### First steps
 
-npm install
+npm install\_\_
 npm start
