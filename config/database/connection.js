@@ -1,11 +1,12 @@
 const mySql = require('mysql');
 const util = require('util');
+require('dotenv').config();
 
 const connection = mySql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'guestbook_db'
+    host     : process.env.HOST,
+    user     : process.env.root,
+    password : process.env.PASSWORD,
+    database : process.env.DATABASE
 });
 
 connection.query = util.promisify(connection.query).bind(connection);
